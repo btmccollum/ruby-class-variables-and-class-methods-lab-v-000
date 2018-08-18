@@ -1,5 +1,5 @@
 require 'pry'
-
+require 'benchmark'
 class Song
 
   attr_accessor :name, :artist, :genre
