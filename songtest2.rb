@@ -7,9 +7,9 @@ class Song
   @@genres = []
   @@genre_count = {}
   @@artist_count = {}
-  
+
   attr_reader :name, :artist, :genre
-  
+
   def initialize(name, artist, genre)
     @name= name
     @artist= artist
@@ -17,12 +17,12 @@ class Song
     @@count += 1
     @@genres << genre
     @@artists << artist
-  end  
-  
+  end
+
   def self.count
     @@count
   end
-  
+
   def self.genre_count
     @@genres.each {|genre|
       if @@genre_count.keys.include?(genre)
@@ -33,11 +33,11 @@ class Song
     }
     @@genre_count
   end
-  
+
   def self.genres
     @@genres.uniq
   end
-  
+
   def self.artists
     @@artists.uniq
   end
@@ -51,6 +51,6 @@ class Song
     }
     @@artist_count
   end
-  
-end 
+
+end
 binding.pry
